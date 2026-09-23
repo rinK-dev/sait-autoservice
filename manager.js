@@ -50,3 +50,23 @@ function logout() {
     location.href="login.html"
 }
 load();
+
+// замена строки внутри load():
+list.innerHTML = d.users.map((u,i) => `<tr style="--i:${i}"><td>${u.name}</td><td>${u.email}</td><td class="role">${u.role}</td><td><span class="status ${u.active?'active':'blocked'}">${u.active?'Активен':'Заблокирован'}</span></td><td>${u.role==="manager"?"":`<button class="danger" onclick="toggle(${u.id})">${u.active?"Заблокировать":"Разблокировать"}</button>`}</td></tr>`).join("");
+
+// простая система тостов — добавить один раз в файл
+function toast(text, type = 'success') {
+    let box = document.querySelector('.toast-container');
+    if (!box) { box = document.createElement('div'); box.className = 'toast-container'; document.body.appendChild(box); }
+    const t = document.createElement('div');
+    t.className = `toast ${type}`;
+    t.textContent = text;
+    box.appendChild(t);
+    setTimeout(() => { t.classList.add('leaving'); setTimeout(() => t.remove(), 200); }, 2600);
+}
+
+// в invite(): заменить alert("Ссылка приглашения:\n"+d.invite_url) на:
+navigator.clipboard?.writeText(d.invite_url);
+toast('Ссылка приглашения скопирована в буфер');
+
+// в catch(e) заменить alert(e.message) на toast(e.message, 'error')

@@ -15,3 +15,12 @@ function logout() {
     location.href="login.html"
 }
 load();
+
+// client.js: в cars.innerHTML=d.cars.map(...) добавить индекс и style="--i:${i}" на .card
+cars.innerHTML = d.cars.map((c,i) => `<div class="card" style="--i:${i}">...`).join("")
+
+// mechanic.js: аналогично
+clients.innerHTML = d.clients.map((c,i) => `<div class="card" style="--i:${i}">...`).join("")
+
+// и там же alert(e.message) / alert("Сохранено") можно заменить на toast(...) 
+// (скопируй функцию toast() из manager.js в этот файл)
