@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Управление
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <main class="dash">
+   <div class="head">
+    <h1>
+     Управление механиками
+    </h1>
+    <button class="secondary" onclick="logout()">
+     Выйти
+    </button>
+   </div>
+   <div class="notice">
+    Старший механик создаёт приглашение. Новый механик сам устанавливает пароль.
+   </div>
+   <section class="panel">
+    <button class="primary" onclick="invite()">
+     + Добавить механика
+    </button>
+    <div id="msg">
+    </div>
+    <table class="table">
+     <thead>
+      <tr>
+       <th>
+        Имя
+       </th>
+       <th>
+        Gmail
+       </th>
+       <th>
+        Роль
+       </th>
+       <th>
+        Статус
+       </th>
+       <th>
+       </th>
+      </tr>
+     </thead>
+     <tbody id="list">
+     </tbody>
+    </table>
+   </section>
+  </main>
+  <script src="manager.js">
+  </script>
+ </body>
+</html>

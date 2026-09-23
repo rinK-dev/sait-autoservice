@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Завершение регистрации
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body class="auth">
+  <div class="box">
+   <h1>
+    Завершение регистрации
+   </h1>
+   <div id="msg">
+   </div>
+   <form onsubmit="register(event)">
+    <div class="field">
+     <label>
+      Имя
+     </label>
+     <input id="name" required=""/>
+    </div>
+    <div class="field">
+     <label>
+      Gmail
+     </label>
+     <input id="email" readonly="" type="email"/>
+    </div>
+    <div class="field">
+     <label>
+      Пароль
+     </label>
+     <input id="password" minlength="8" required="" type="password"/>
+    </div>
+    <div class="field">
+     <label>
+      Повтор пароля
+     </label>
+     <input id="password2" minlength="8" required="" type="password"/>
+    </div>
+    <button class="primary">
+     Создать аккаунт
+    </button>
+   </form>
+  </div>
+  <script src="auth.js">
+  </script>
+ </body>
+</html>

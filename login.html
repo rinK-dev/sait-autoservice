@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Вход
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body class="auth">
+  <div class="box">
+   <a class="logo" href="index.html">
+    🔧 AutoService
+   </a>
+   <h1>
+    Вход
+   </h1>
+   <div id="msg">
+   </div>
+   <form onsubmit="login(event)">
+    <div class="field">
+     <label>
+      Gmail
+     </label>
+     <input id="email" required="" type="email"/>
+    </div>
+    <div class="field">
+     <label>
+      Пароль
+     </label>
+     <input id="password" required="" type="password"/>
+    </div>
+    <button class="primary">
+     Войти
+    </button>
+   </form>
+   <p class="hint">
+    Для механика регистрация выполняется по приглашению.
+   </p>
+  </div>
+  <script src="auth.js">
+  </script>
+ </body>
+</html>
